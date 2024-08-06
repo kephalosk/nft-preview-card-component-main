@@ -19,9 +19,16 @@
                 color: hsl(228, 45%, 44%);
             }
 
+            .authorName {
+                color: hsl(0, 0%, 100%);
+            }
+
             .imgAvatar {
+                border: 1px solid hsl(0, 0%, 100%);
+                border-radius: 50px;
                 width: 32px;
                 height: auto;
+                margin-right: 10px;
             }
 
             .imgNFT {
@@ -30,7 +37,7 @@
             }
 
             #authorBar {
-                border: 1px hsl(0, 0%, 100%);
+                color: hsl(215, 51%, 70%);
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
@@ -39,8 +46,9 @@
             }
 
             #cardBox {
+                background-color: hsl(216, 50%, 16%);
                 border-radius: 15px;
-                box-shadow: 0px 0px 50px 2px;
+                box-shadow: 0px 5px 50px -15px;
                 margin: 150px 0;
                 padding: 24px;
                 width: 350px;
@@ -54,25 +62,42 @@
 
             #priceBarLeft {
                 align-items: center;
+                color: hsl(178, 100%, 50%);
                 display: flex;
                 justify-content: flex-start;
             }
 
             #priceBarRight {
                 align-items: center;
+                color: hsl(215, 51%, 70%);
                 display: flex;
                 justify-content: flex-end;
             }
 
             body {
                 align-items: center;
+                background-color: hsl(217, 54%, 11%);
                 justify-content: center;
                 display: flex;
                 flex-direction: column;
             }
 
+            h1 {
+                color: hsl(0, 0%, 100%);
+            }
+
+            hr {
+                background-color: hsl(215, 32%, 27%);
+                height: 1px;
+                border: 0;
+            }
+
             label {
                 margin-left: 6px;
+            }
+
+            p {
+                color: hsl(215, 51%, 70%);
             }
         </style>
     </head>
@@ -94,7 +119,7 @@
             <hr>
             <div id="authorBar">
                 <img class="imgAvatar" alt="image of avatar" src="images/image-avatar.png">
-                <label>Creation of Jules Wyvern</label>
+                <label>Creation of <span class="authorName">Jules Wyvern</span></label>
             </div>
         </div>
         <footer class="attribution">
