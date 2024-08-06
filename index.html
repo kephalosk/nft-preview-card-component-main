@@ -33,9 +33,50 @@
                 margin-right: 10px;
             }
 
+            .container {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                max-height: 350px;
+                max-width: 350px;
+            }
+
+            .container:hover .overlay {
+                opacity: 1;
+            }
+
             .imgNFT {
                 border-radius: 10px;
+                display: block;
                 width: 350px;
+            }
+
+            .imgNFT:hover {
+                color: hsl(178, 100%, 50%);
+            }
+
+            .overlay {
+                align-items: center;
+                border-radius: 10px;
+                justify-content: center;
+                display: flex;
+                position: absolute;
+                bottom: 0;
+                background: hsl(178, 100%, 50%, 0.5);
+                //background: rgba(0, 0, 0, 0.5); /* Black see-through */
+                color: #f1f1f1;
+                height: 100%;
+                width: 100%;
+                transition: .5s ease;
+                opacity:0;
+                color: white;
+                font-size: 20px;
+                padding: 20px;
+                text-align: center;
+            }
+
+            * {
+                box-sizing: border-box
             }
 
             #authorBar {
@@ -54,7 +95,7 @@
                 box-shadow: 0px 5px 50px -15px;
                 margin: 150px 0;
                 padding: 24px;
-                width: 350px;
+                width: 398px;
             }
 
             #priceBar {
@@ -89,6 +130,7 @@
             h1 {
                 color: hsl(0, 0%, 100%);
                 font-size: 22px;
+                margin-top: 22px;
             }
 
             hr {
@@ -110,7 +152,10 @@
     </head>
     <body>
         <div id="cardBox">
-            <img class="imgNFT" alt="image of NFT" src="images/image-equilibrium.jpg">
+            <div class="container">
+                <img class="imgNFT" alt="image of NFT" src="images/image-equilibrium.jpg">
+                <div class="overlay"><img src="images/icon-view.svg"></div>
+            </div>
             <h1>Equilibrium #3429</h1>
             <p>Our Equilibrium collection promotes balance and calm.</p>
             <div id="priceBar">
